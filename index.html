@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="utf-8">
+	<title>Flappy bird</title>
+	<style type="text/css">
+		button {
+			width: 50px;
+			height: 40px;
+			background-color: yellowgreen;
+			border-radius: 17px;
+			color: white;
+		}
+		div{
+			background-color: black;
+			color: white;
+		}
+		h1{
+			color: white;
+		}
+	</style>
+</head>
+<body>
+	<audio src="sound/1.m4a" id="1"></audio>
+	<audio src="sound/2.mp3" id="2"></audio>
+	<img src="image/bg.jpeg" width="0" height="0" id="bg">
+	<img src="image/base.jpg" width="0" height="0" id="base">
+	<img src="image/bird1.png" width="0" height="0" id="bird1">
+	<img src="image/bird2.png" width="0" height="0" id="bird2">
+	<img src="image/pipe.png" width="0" height="0" id="pipe">
+	<div><canvas id="myCanvas" onclick="clickFly()"></canvas></div>
+	<div><button onclick="playAgain()">play again</button></div>
+	<div id="bestscore"></div>
+	<script type="text/javascript" src="bird.js"></script>
+	<script type="text/javascript" src="background.js"></script>
+	<script type="text/javascript" src="pipe.js"></script>
+	<script type="text/javascript" src="game.js"></script>
+</body>
+</html>
