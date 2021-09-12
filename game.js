@@ -58,8 +58,11 @@ function run(){
 }
 
 function clickFly(){
-	sound1.play();
-	game.bird.speedY = -13;
+	if (game.status == false) {
+		sound1.play();
+		game.bird.speedY = -13;
+	}
+	
 }
 function playAgain(){
 	game.score = 0;

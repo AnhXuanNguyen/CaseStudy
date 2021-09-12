@@ -22,12 +22,12 @@ class Bird{
 				this.speedY += this.acceleration;
 				this.y += this.speedY;
 		}else{
-			this.game.context.drawImage(this.imageEndgame,this.x,this.y);
+			this.game.context.drawImage(this.imageEndgame,this.x-70,this.y-40);
 			this.game.status = true;
 			return;
 		} 
-		if ((this.x+40 > this.game.pipe.x && this.x<this.game.pipe.x + 60)&&((this.y < this.game.pipe.y - 120) ||(this.y+40 > this.game.pipe.y))){
-			this.game.context.drawImage(this.imageEndgame,this.x,this.y);
+		if ((this.x+40 > this.game.pipe.x && this.x<this.game.pipe.x + 40)&&((this.y < this.game.pipe.y - 120) ||(this.y+40 > this.game.pipe.y))){
+			this.game.context.drawImage(this.imageEndgame,this.x-70,this.y-40);
 			this.game.status = true;
 			return;
 		}
