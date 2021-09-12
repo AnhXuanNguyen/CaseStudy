@@ -23,7 +23,7 @@ class Game{
 		this.pipe = new Pipe(this, pipe, 120);
 		this.base = new Background(this,base,0,0,8);
 		this.base.y = this.height - 90;
-		this.bird = new Bird(this,bird1,bird2);
+		this.bird = new Bird(this,bird1,bird2,bird3);
 	}
 	run(){
 		if (this.score > this.bestScore) {
@@ -36,6 +36,7 @@ class Game{
 		this.context.fillText("score: "+this.score,0,30);
 	}
 }
+let bird3 = document.getElementById('bird3');
 let bg = document.getElementById('bg');
 let base = document.getElementById('base');
 let bird1 = document.getElementById('bird1');
@@ -51,7 +52,9 @@ function run(){
 	if (game.status == false) {
 		game.run();
 		setTimeout(run,30);
-	}else sound2.play();
+	}else{
+		sound2.play();
+	} 
 }
 
 function clickFly(){
